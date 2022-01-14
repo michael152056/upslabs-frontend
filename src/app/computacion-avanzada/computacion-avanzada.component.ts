@@ -11,5 +11,8 @@ export class ComputacionAvanzadaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  recargar(url:string){
+    window.open(url, '_blank');
+  }
+  
 }

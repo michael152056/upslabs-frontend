@@ -14,6 +14,10 @@ export class LaboratoriosComponent implements OnInit {
   ngOnInit(): void {
 
   }
+  recargar(url:string){
+    window.open(url, '_blank');
+  }
+  
 
 
 
