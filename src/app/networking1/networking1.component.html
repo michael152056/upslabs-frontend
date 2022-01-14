@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<app-encabezado></app-encabezado>
+<body>
+  <header id="barra_navegacion">
+    <div class="container_img"><a class="navbar-brand" routerLink="/index"><img class="img-fluid" src="assets/brand_logo.png" alt=""></a> <button
+        style="background-color: none; border: none; background: none;color:white; font-size: 25px" onclick=""
+        id="btn_sonido"></button></div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm p-3 mb-5 bg-body rounded">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+        
+                  <a class="nav-link" routerLink="/home"><i class="fas fa-home"></i> Inicio </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/acerca"><i class="fas fa-user"></i> Acerca </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" routerLink="/laboratorios"><i class="fas fa-flask"></i> Laboratorios </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/docentes"><i class="fas fa-id-card-alt"></i> Docentes </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/eventos"><i class="fas fa-calendar-alt"></i> Eventos </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/contactanos"><i class="fas fa-map-marked-alt"></i> Contáctanos </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+</header>
+
+  <div class="row container_titulo">
+    <div class="row titulo">
+      <h1>Laboratorios</h1>
+    </div>
+    <div class="lines">
+      <div class="line_1"></div>
+      <div class="line_2"></div>
+      <div class="line_3"></div>
+    </div>
+  </div>
+  <br>
+  <div class="container_laboratorios container">
+    <div class="row">
+      <div class="col col-3 container_navbar">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active default_link"  aria-current="page" routerLink="/laboratorios">Interacción Humano Máquina</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link default_link" routerLink="/computacion_avanzada">Computación Avanzada</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active_link" routerLink="/networking1">Networking 1</a>
+          </li>
+ 
+          <li class="nav-item">
+          <a class="nav-link default_link" routerLink="/networking2">Networking 2</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link default_link" routerLink="/networking3">Networking 3</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="row">
+            <h1>Networking 1</h1>
+        </div>
+        <br>
+        <div class="row wrapper_lab rounded">
+          <button routerLink="/n1_aframe" class="img_lab"></button>
+        </div>
+        <br>
+        <div class="row texto_lab">
+          <p>
+            El laboratorio cuenta con varios equipos a su disposición con todos los recursos informáticos necesarios para aumentar el aprendizaje focalizado en el area de redes, ya que cuenta con dispositivos como routers, switchs ,hubs, cables ethernet y de diferente tipo almacenados en cada uno de sus raks.
+            Además tiene a su disposición proyectores para una visualización de manera sencilla y práctica de presentaciones de archivos de gran ayuda  para exposiciones de docentes y estudiantes, y por último se dictan materias como:     
+        </p>
+
+        <div class="lista">
+          <br>
+        <ol>
+          <li>Networking</li>
+          <li>Lab Redes de Computadoras I </li>
+          <li>Diseño de Redes </li>
+          <li>Criptografía </li>
+          <li>Aplicaciones Telemáticas</li>
+          <li>Redes Altas Prestaciones  </li>
+        </ol> </div>
+        </div>
+   
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <app-footer></app-footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <script src="/js/script_laboratorios.js"></script>
+</body>
+
+</html>

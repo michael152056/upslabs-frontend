@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <header id="barra_navegacion">
+    <div class="container_img"><a class="navbar-brand" routerLink="/index"><img class="img-fluid" src="assets/brand_logo.png" alt=""></a> <button
+        style="background-color: none; border: none; background: none;color:white; font-size: 25px" onclick=""
+        id="btn_sonido"></button></div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm p-3 mb-5 bg-body rounded">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+        
+                  <a class="nav-link  active" routerLink="/home"><i class="fas fa-home"></i> Inicio </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/acerca"><i class="fas fa-user"></i> Acerca </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/laboratorios"><i class="fas fa-flask"></i> Laboratorios </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/docentes"><i class="fas fa-id-card-alt"></i> Docentes </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/eventos"><i class="fas fa-calendar-alt"></i> Eventos </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/contactanos"><i class="fas fa-map-marked-alt"></i> Contáctanos </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+</header>
+
+  <div class="container">
+    <div class="row noticias_container">
+      <div class="col">
+        <div class="carousel_noticias">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/atencion.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Los laboratorios no estarán disponibles hasta el 06 de Enero de 2022</h5>
+                  <p>Debido a las nuevas normas de bioseguridad el ingreso a los laboratorios se harán a partir del
+                    jueves....</p>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <img src="assets/lab1.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Nuevos equipos se integran en el laboratorio de interacción humano máquina </h5>
+                  <p>25 equipos MAC de última generación serán añadidos para el año 2022 en el laboratorio de
+                    interacción humano máquina.... </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/lab2.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>El alto costo de los servidores del Datacenter</h5>
+                  <p>El datacenter cuenta con servidores muy potentes para el almacenamiento de la información por lo
+                    que tienen un valor monetario muy alto..</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/lab3.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Propuesta de implementación del servicio de internet 2 para los Laboratorios del bloque D</h5>
+                  <p>Se acepta la propuesta de la implementación del servicio de Backup Ejecutivo propuesto por CEDIA
+                    para el respaldo local de la información..</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row titulo_servicios">
+      <div class="col ">
+        <h1 class="titulo">Servicios</h1>
+      </div>
+    </div>
+    <br><br>
+    <div class="servicios justify-content-center row row-cols-lg-4 row-cols-sm-2 row-cols-1">
+      <button title="Revisa el calendario para enterarte de todos los webinars y la disponibilidad de los laboratorios">
+        <div class="col">
+          <div class="row">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="row">
+            <h1>Calendario</h1>
+          </div>
+        </div>
+      </button>
+      <button title="Revisa todos los eventos próximos, incluso puedes buscarlos por su fecha">
+        <div class="col">
+          <div class="row">
+            <i class="fas fa-th-list"></i>
+          </div>
+          <div class="row">
+            <h1>Eventos</h1>
+          </div>
+        </div>
+      </button>
+      <button title="Revisa el historial de reservas realizadas">
+        <div class="col ">
+          <div class="row">
+            <i class="fas fa-history"></i>
+          </div>
+          <div class="row">
+            <h1>Historial</h1>
+          </div>
+        </div>
+      </button>
+      <button title="Revisa el historial de reservas realizadas">
+        <div class="col">
+          <div class="row">
+            <i class="fas fa-calendar-plus"></i>
+          </div>
+          <div class="row">
+            <h1>Reservar</h1>
+          </div>
+        </div>
+      </button>
+    </div>
+    <br>
+    <div class="row row-cols-lg-2 row-cols-sm-1 row-cols-1 titulo_eventos">
+      <div class="col">
+        <div class="row">
+          <h1 class="titulo">Eventos próximos</h1>
+        </div>
+        <br><br>
+        <div class="row">
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/evento1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/evento2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/evento3.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="col">
+        <div class="row">
+          <h1 class="titulo">Introducción laboratorios</h1>
+        </div>
+        <br><br>
+        <div class="row ratio ratio-21x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/48QPI5eXvn4" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <br>
+        <div class="row ratio ratio-21x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/EIv9A1azTUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <app-footer></app-footer>
+</body>
+
+</html>

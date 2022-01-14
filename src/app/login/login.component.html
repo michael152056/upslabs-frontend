@@ -1,0 +1,85 @@
+<html>
+<app-encabezado></app-encabezado>
+
+<body>
+  <header id="barra_navegacion">
+    <div class="container_img"><a class="navbar-brand" routerLink="/index"><img class="img-fluid" src="assets/brand_logo.png" alt=""></a> <button
+        style="background-color: none; border: none; background: none;color:white; font-size: 25px" onclick=""
+        id="btn_sonido"></button></div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm p-3 mb-5 bg-body rounded">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+        
+                  <a class="nav-link" routerLink="/home"><i class="fas fa-home"></i> Inicio </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/acerca"><i class="fas fa-user"></i> Acerca </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/laboratorios"><i class="fas fa-flask"></i> Laboratorios </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/docentes"><i class="fas fa-id-card-alt"></i> Docentes </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/eventos"><i class="fas fa-calendar-alt"></i> Eventos </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/contactanos"><i class="fas fa-map-marked-alt"></i> Contáctanos </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" routerLink="/login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+</header>
+  <div class="container p-0  mt-3 rounded shadow">
+    <div class="row">
+      <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-start img_login">
+
+      </div>
+      <div class="col bg-white rounded-end container_form ">
+        <h4 class="fw-bold text-center">Bienvenido <i class="fas fa-user-lock"></i></h4>
+        <br><br>
+        <!-- Formulario -->
+        <form  method="post">
+          <div class="fw-bold mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email"  placeholder="Email" class="form-control" name="email" required = "required">
+          </div>
+          <div class="fw-bold mb-3"> 
+            <label for="clave" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" name="password" placeholder="Password" required = "required">
+          </div>
+          <div class="text-center">
+            <button type="submit"  class="btn btn-primary">Iniciar Sesión</button>
+          </div>
+
+          <div class="text-black">
+            <span>Te olvidaste tu contraseña?<br> <a href="#"> Recuperar Contraseña</a></span><br>
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="/js/script_login.js"></script>
+</body>
+
+</html>

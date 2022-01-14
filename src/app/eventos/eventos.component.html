@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<app-encabezado></app-encabezado>
+
+<body>
+  <header id="barra_navegacion">
+    <div class="container_img"><a class="navbar-brand" routerLink="/index"><img class="img-fluid" src="assets/brand_logo.png" alt=""></a> <button
+        style="background-color: none; border: none; background: none;color:white; font-size: 25px" onclick=""
+        id="btn_sonido"></button></div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm p-3 mb-5 bg-body rounded">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+        
+                  <a class="nav-link" routerLink="/home"><i class="fas fa-home"></i> Inicio </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/acerca"><i class="fas fa-user"></i> Acerca </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/laboratorios"><i class="fas fa-flask"></i> Laboratorios </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/docentes"><i class="fas fa-id-card-alt"></i> Docentes </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" routerLink="/eventos"><i class="fas fa-calendar-alt"></i> Eventos </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/contactanos"><i class="fas fa-map-marked-alt"></i> Contáctanos </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+</header>
+  <div class="row container_titulo">
+    <div class="row titulo">
+      <h1>Eventos</h1>
+    </div>
+    <div class="lines">
+      <div class="line_1"></div>
+      <div class="line_2"></div>
+      <div class="line_3"></div>
+    </div>
+  </div>
+  <br>
+
+  <div class="row container_proyectos">
+    <div id="panel_regresar" class="col col-11 cols-sm-4 col-md-4 col-lg-3 container_filtros shadow-sm mb-5 bg-body rounded">
+      <div class="row">
+        <div class="col">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Comienza tu búsqueda" aria-label="Example text with button addon" aria-describedby="button-addon1">
+            <button class="btn btn-outline-secondary btn_buscar" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row">
+          <small>Tipos de eventos:</small><br>
+        </div>
+        <div class="row container_etiquetas">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaul2t">
+            <label class="form-check-label" for="flexCheckDefaul2t">
+              Consejo
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2" checked>
+            <label class="form-check-label" for="flexCheckChecked2">
+              Webinar
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault8">
+            <label class="form-check-label" for="flexCheckDefault8">
+              Académico
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChec5ked" checked>
+            <label class="form-check-label" for="flexCheckChec5ked">
+              Feriado
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckC8hecked" checked>
+            <label class="form-check-label" for="flexCheckC8hecked">
+              Vacaciones
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCh8eckChecked" checked>
+            <label class="form-check-label" for="flexCh8eckChecked">
+              Reunión
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row">
+            <small>Ordenar por:</small><br>
+          </div>
+          <div class="row ordenar_combo">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Seleccione</option>
+              <option value="1">Más destacados</option>
+              <option value="3">Más recientes</option>
+              <option value="2">Más antiguos</option>
+              <option value="2">Más likes</option>
+            </select>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="row">
+            <small>Desde:</small><br>
+          </div>
+          <div class="row ordenar_combo">
+            <input class="form-control" type="date">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="row">
+            <small>Hasta:</small><br>
+          </div>
+          <div class="row ordenar_combo">
+            <input class="form-control" type="date">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col-1 btn_regresar">
+      <button id="btn_ocultar" onclick="ocultar()"><i class="fas fa-chevron-left"></i></button>
+    </div>
+    <div class="col">
+      <div class="row container_pagination">
+        <div class="col pagination_items">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>
+              <li class="page-item active"><a class="page-link active2" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col cont_resultados">
+          <p>204 resultados</p>
+        </div>
+        <div class="col vista">
+          <button class="rounded active_button"><i class="fas fa-th"></i></button>
+          <button class="rounded"><i class="fas fa-th-list"></i></button>
+        </div>
+      </div>
+      <div class="row container__card row-cols-lg-2 row-cols-1 justify-content-center">
+        <div class="col snip1529">
+          <div class="snip__container">
+            <div class="img__snip" style="background-image: url(/assets/1evento.jpeg);"></div>
+            <div class="date"><span class="day">5</span><span class="month">OCT</span></div>
+            <div class="hover"><i class="fas fa-eye"></i>
+              &nbsp;485
+              <a href="${tarjetas_publicaciones.enlace[i]}"></a>
+            </div>
+
+          </div>
+          <div class="container__interactions">
+            <div class="interactions__like">
+              <div class="icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="count">
+                18
+              </div>
+            </div>
+            <div class="interactions__comment">
+              <div class="icon">
+                <i class="fas fa-comment-dots"></i>
+              </div>
+              <div class="count">
+                36
+              </div>
+            </div>
+            <div class="interactions__share">
+              <div class="icon">
+                <i class="fas fa-share"></i>
+              </div>
+              <div class="count">
+                9
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col snip1529">
+          <div class="snip__container">
+            <div class="img__snip" style="background-image: url(/assets/1evento.jpeg);"></div>
+            <div class="date"><span class="day">5</span><span class="month">OCT</span></div>
+            <div class="hover"><i class="fas fa-eye"></i>
+              &nbsp;485
+              <a href="${tarjetas_publicaciones.enlace[i]}"></a>
+            </div>
+
+          </div>
+          <div class="container__interactions">
+            <div class="interactions__like">
+              <div class="icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="count">
+                18
+              </div>
+            </div>
+            <div class="interactions__comment">
+              <div class="icon">
+                <i class="fas fa-comment-dots"></i>
+              </div>
+              <div class="count">
+                36
+              </div>
+            </div>
+            <div class="interactions__share">
+              <div class="icon">
+                <i class="fas fa-share"></i>
+              </div>
+              <div class="count">
+                9
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col snip1529">
+          <div class="snip__container">
+            <div class="img__snip" style="background-image: url(/assets/1evento.jpeg);"></div>
+            <div class="date"><span class="day">5</span><span class="month">OCT</span></div>
+            <div class="hover"><i class="fas fa-eye"></i>
+              &nbsp;485
+              <a href="${tarjetas_publicaciones.enlace[i]}"></a>
+            </div>
+
+          </div>
+          <div class="container__interactions">
+            <div class="interactions__like">
+              <div class="icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="count">
+                18
+              </div>
+            </div>
+            <div class="interactions__comment">
+              <div class="icon">
+                <i class="fas fa-comment-dots"></i>
+              </div>
+              <div class="count">
+                36
+              </div>
+            </div>
+            <div class="interactions__share">
+              <div class="icon">
+                <i class="fas fa-share"></i>
+              </div>
+              <div class="count">
+                9
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col snip1529">
+          <div class="snip__container">
+            <div class="img__snip" style="background-image: url(/assets/1evento.jpeg);"></div>
+            <div class="date"><span class="day">5</span><span class="month">OCT</span></div>
+            <div class="hover"><i class="fas fa-eye"></i>
+              &nbsp;485
+              <a href="${tarjetas_publicaciones.enlace[i]}"></a>
+            </div>
+
+          </div>
+          <div class="container__interactions">
+            <div class="interactions__like">
+              <div class="icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="count">
+                18
+              </div>
+            </div>
+            <div class="interactions__comment">
+              <div class="icon">
+                <i class="fas fa-comment-dots"></i>
+              </div>
+              <div class="count">
+                36
+              </div>
+            </div>
+            <div class="interactions__share">
+              <div class="icon">
+                <i class="fas fa-share"></i>
+              </div>
+              <div class="count">
+                9
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col snip1529">
+          <div class="snip__container">
+            <div class="img__snip" style="background-image: url(/assets/1evento.jpeg);"></div>
+            <div class="date"><span class="day">5</span><span class="month">OCT</span></div>
+            <div class="hover"><i class="fas fa-eye"></i>
+              &nbsp;485
+              <a href="${tarjetas_publicaciones.enlace[i]}"></a>
+            </div>
+
+          </div>
+          <div class="container__interactions">
+            <div class="interactions__like">
+              <div class="icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="count">
+                18
+              </div>
+            </div>
+            <div class="interactions__comment">
+              <div class="icon">
+                <i class="fas fa-comment-dots"></i>
+              </div>
+              <div class="count">
+                36
+              </div>
+            </div>
+            <div class="interactions__share">
+              <div class="icon">
+                <i class="fas fa-share"></i>
+              </div>
+              <div class="count">
+                9
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col snip1529">
+          <div class="snip__container">
+            <div class="img__snip" style="background-image: url(/assets/1evento.jpeg);"></div>
+            <div class="date"><span class="day">5</span><span class="month">OCT</span></div>
+            <div class="hover"><i class="fas fa-eye"></i>
+              &nbsp;485
+              <a href="${tarjetas_publicaciones.enlace[i]}"></a>
+            </div>
+
+          </div>
+          <div class="container__interactions">
+            <div class="interactions__like">
+              <div class="icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="count">
+                18
+              </div>
+            </div>
+            <div class="interactions__comment">
+              <div class="icon">
+                <i class="fas fa-comment-dots"></i>
+              </div>
+              <div class="count">
+                36
+              </div>
+            </div>
+            <div class="interactions__share">
+              <div class="icon">
+                <i class="fas fa-share"></i>
+              </div>
+              <div class="count">
+                9
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <br>
+      <div class="row container_pagination2 justify-content-center row-cols-auto">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>
+            <li class="page-item active"><a class="page-link active2" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <app-footer></app-footer>
+
+    <script src="/src/app/eventos/eventos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>

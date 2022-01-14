@@ -1,0 +1,111 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box !important;
+
+}
+
+:root {
+	--logo_change: url(/img/dragon_blanco.png) !important;
+	--amarillo: rgb(255, 219, 0);
+	--azul: rgb(13, 37, 73);
+	--color_btn: rgb(63, 81, 181);
+  }
+  
+
+html {
+	min-height: 100%;
+	position: relative;
+  }
+
+:root{
+  --logo_change: url(/img/dragon_blanco.png) !important;
+}
+
+.container_titulo{
+	color: rgb(13, 37, 73);
+	width: 100%;
+  }
+  
+  .titulo{
+	padding-left: 11vw;
+  }
+  
+  .line_1{
+	height: 0.5px;
+	width: 13%;
+	background-color: lightgray;
+  }
+  
+  .line_2{
+	height: 8px;
+	background-color: rgb(255, 219, 0);
+	width: 20%;
+  }
+  .line_3{
+	height: 0.5px;
+	width: 100%;
+	background-color: lightgray;
+  }
+  
+  .lines{
+	display: flex;
+	align-items: center;
+  }
+
+  
+  .active_link
+  {
+	  color: rgb(63, 81, 181) !important;
+	  border-right: 1px solid rgb(63, 81, 181) !important;
+	  padding-bottom: 2em;
+  }
+
+  .nav-item .default_link{
+	border-right: 1px solid lightgray;
+	color: gray;
+	padding-bottom: 2em;
+
+  }
+
+  .nav-item .default_link:hover{
+	color: rgb(63, 81, 181) !important;
+	  border-right: 1px solid rgb(63, 81, 181) !important;
+  }
+
+  .wrapper_lab{
+	width: 45em;
+	height: 60vh;
+	overflow:hidden; 
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-left: 6vw;
+  }
+  .img_lab{
+	  border: none;
+	  background-image: url(/assets/computacion_avanzada.png);
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  cursor: pointer;
+	  width: 100%;
+	  height: 100%;
+	  transition: transform 2s;
+  }
+
+  .img_lab:hover{
+		background-image: url(/assets/ca_tour.png);
+		transform:scale(1.1) ;
+		-webkit-transform:scale(1.1) ;
+		-moz-transform:scale(1.1) ;
+		-ms-transform:scale(1.1) ;
+		-o-transform:scale(1.1) ;
+}
+
+.lista{
+	padding-left: 3vw;
+}
+
+.texto_lab{
+	font-size: 1.5em;
+}

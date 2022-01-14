@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(251, 251, 251);
+}
+
+:root{
+    --azul: rgb(13, 37, 73);
+    --blanco: #f7f7f7;
+    --azul_claro: rgb(18, 69, 122);
+    --celeste: rgb(168, 218, 232);
+    --amarillo: rgb(255, 219, 0);
+    }
+    
+    .btn {
+        background-color:rgb(18, 69, 122);
+    }
+    
+    .btn:hover{
+        transition: all .5s; 
+        background-color:rgb(255, 219, 0)
+    }

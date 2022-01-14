@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+html {
+	min-height: 100%;
+	position: relative;
+  }
+
+  body {
+	margin: 0;
+	margin-bottom: 40px;
+  }
+
+p {
+  color: #cdcdcd;
+}
+
+body {
+  background-color: rgb(251, 251, 251);
+}
+
+.container {
+  color: black !important;
+}
+
+.img_login {
+  background-image: url(/assets/IMG_8073.jpeg);
+  background-color: rgb(13, 37, 73);
+  background-position: center center;
+  background-size: cover;
+}
+
+.container_img_login {
+  height: 5em !important;
+}
+
+.container_form{
+	padding: 2.5em;
+}
+
+.text-black span
+{
+	color: black !important;
+}
+
+.text-black a{
+	text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+	background-color:  rgb(13, 37, 73);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+  }
+  
+  .container_footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100% !important;
+  }
+  
+  .container_footer img {
+	width: 60px;
+	height: 60px;
+  }
+  
+  .container_footer .imagen {
+	padding-top: 0.5em;
+  }
+  
+  .container_footer .texto {
+	padding-top: 1.4em;
+  }
+  .container_footer .texto p {
+	color: white;
+	text-align: center;
+  }

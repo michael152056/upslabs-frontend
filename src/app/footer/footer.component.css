@@ -1,0 +1,143 @@
+footer {
+  height: auto;
+  background-color:rgb(13, 37, 73);
+}
+
+footer h5,p{
+    color: white;
+}
+
+.footer__social {
+  text-align: center;
+  padding-top: 2em;
+}
+
+.container__social {
+  text-align: center;
+  justify-content: center;
+}
+
+.img__social img {
+  text-align: center;
+}
+
+.cajas_redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: rgb(18, 69, 122);
+  width: 3em;
+  height: 3em;
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+  margin-left: 2vw;
+}
+
+.facebook:hover {
+  background-color: rgb(12, 136, 239);
+  color: white;
+}
+
+
+.instagram:hover {
+  background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  color: white;
+}
+.github {
+  text-decoration-color: white;
+  -moz-text-decoration-color: white;
+}
+
+.github:hover {
+  background-color: rgb(36, 40, 46);
+  color: white;
+}
+
+.footer__paginas a,
+.footer__documentos a,
+.footer__enlaces a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__social img {
+  width: 110px;
+}
+.footer__social p {
+  margin-left: 1em;
+}
+.footer__paginas {
+  margin: 1em;
+}
+.footer__paginas h5,
+.footer__documentos h5,
+.footer__enlaces h5 {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border-bottom: 3px solid rgb(255, 223, 75);
+  padding-bottom: 8px;
+}
+.footer__paginas p,
+.footer__documentos p,
+.footer__enlaces p {
+  line-height: 0.8em;
+  opacity: 0.7;
+}
+
+.footer__documentos {
+  margin: 1em;
+}
+.footer__enlaces {
+  margin: 1em;
+}
+.footer__copy {
+  border-top: 1px solid white;
+  padding-top: 1em;
+  text-align: center;
+  background-color: rgb(13, 37, 73)!important;
+}
+
+.footer__paginas a:hover p {
+  opacity: 1;
+}
+
+.footer__enlaces a:hover p {
+  opacity: 1;
+}
+
+.footer__documentos a:hover p {
+  opacity: 1;
+}
+
+footer .row{
+  width: 100% !important;
+}
