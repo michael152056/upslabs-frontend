@@ -1,0 +1,21 @@
+
+<app-cabeza-usuario></app-cabeza-usuario>
+  
+<div class="container-fluid">
+    <div class="row">
+<div class="barra-lateral col-12 col-sm-auto">
+    <app-menu-dash></app-menu-dash>
+  </div>
+  <div class="calendario"  >
+      <div class="row">
+        <div class="col flex">Eventos <div class="identificador"></div> </div>
+        <div class="col flex">Reserva de Laboratorio <div class="identificador2"></div>  </div>
+        <div class="col flex">Reserva de Equipos <div class="identificador3"></div>  </div>
+      </div>
+      <br>
+      <div *ngFor="let hor of listEvents;let i = index">
+      <p-fullCalendar *ngIf="i === listEvents.length-1"  [events]="listEvents" [options] = "options"></p-fullCalendar> 
+    </div>
+ 
+  </div>
+  </div>

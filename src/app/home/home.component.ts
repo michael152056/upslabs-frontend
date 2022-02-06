@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Noticia } from '../models/noticia';
+import { NoticiaService } from '../services/noticia.service';
+
+import { Evento } from '../models/evento';
+import { EventoService } from '../services/evento.service';
 
 @Component({
   selector: 'app-home',
@@ -6,17 +11,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  listNoticias: Noticia[] = [];
+  listEventos: Evento[] = [];
+
+  constructor(private _noticiaService: NoticiaService,private _eventoService: EventoService) { }
 
 
   ngOnInit(): void {
-  /*   this.getUserLogged(); */
+    this.obtenerNoticias();
+    this.obtenerEventos();
   }
-/*   getUserLogged() {
-    this.userService.getUser().subscribe(user => {
-      console.log(user);
-    });
 
+
+  obtenerNoticias(){
+    this._noticiaService.getNoticias().subscribe(data => {
+      console.log(data);
+      this.listNoticias = data;
+    }, error =>{
+      console.log(error);
+    }
+   )
   }
-   */
+
+  obtenerEventos(){
+    this._eventoService.getEventos().subscribe(data => {
+      console.log(data);
+      this.listEventos = data;
+    }, error =>{
+      console.log(error);
+    }
+   )
+  }
+
 
 }

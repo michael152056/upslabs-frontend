@@ -1,0 +1,70 @@
+<app-cabeza-usuario></app-cabeza-usuario>
+
+
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="barra-lateral col-12 col-sm-auto">
+            <app-menu-admin></app-menu-admin>
+        </div>
+        <main class="main col">
+
+            <div class="container mt-5">
+                <div  class="row">
+                    <div style="padding: 0 0 !important;margin: 0 !important;" class="col-lg-12 offset-lg-2">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <span class="titulo">Listado de Equipos</span>
+                                <br>
+                                <br>
+                                <button class="btn btn-success float-start" routerLink="/crear-equipo">
+                                    Nuevo <i class="fas fa-plus"></i>
+                                </button>
+
+                                <button class="btn btn-dark float-start ms-4" (click)="generatePDF()">
+                                    Generar PDF <i class="fas fa-file-pdf"></i>
+                                </button>
+                                
+                                <br>
+                                <br>
+                                <table *ngIf="listEquipos.length > 0" class="table table-hover table-bordered table-striped mt-3">
+                                    <thead>
+                                        <tr class="">
+                                            <th scope="col">Código</th>
+                                            <th scope="col">Equipo</th>
+                                            <th scope="col">Modelo</th>
+                                            <th scope="col">Marca</th>
+                                            <th scope="col">Serie</th>
+                                            <th scope="col">Ubicación</th>
+                                            <th scope="col">Estado</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let equipo of listEquipos">
+                                            <td >{{equipo.codigo}}</td>
+                                            <td >{{equipo.equipo}}</td>
+                                            <td>{{equipo.modelo}}</td>
+                                            <td>{{equipo.marca}}</td>
+                                            <td>{{equipo.serie}}</td>
+                                            <td>{{equipo.ubicacion}}</td>
+                                            <td>{{equipo.estado}}</td>
+                                            <td><i (click)="ruta(equipo._id)" 
+                                                class="fas fa-edit text-primary"></i><i
+                                                (click)="eliminarEquipo(equipo._id)"
+                                                class="fas fa-trash text-danger"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h5 style="text-align: start;margin-bottom: 10px;" *ngIf="listEquipos.length == 0">
+                                    No hay equipos para mostrar</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+<app-cabeza-usuario></app-cabeza-usuario>
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="barra-lateral col-12 col-sm-auto">
+            <app-menu-admin></app-menu-admin>
+        </div>
+        <div class="col container mt-5">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="card">
+                        <div class="card-body  ">
+                            <h3 class="text-center">
+                                {{titulo | uppercase}}
+                              </h3>
+                            <form class="mt-3" [formGroup]="equipoForm" (ngSubmit)="agregarEquipo()">
+                              
+                                <div class="mb-3">
+                                    <label for="equipo" class="mb-2"><strong>Equipo:</strong> </label>
+                                    <input name="equipo" formControlName="equipo" type="text" placeholder="Equipo"
+                                        class="form-control form-control-lg" aria-describedby="emailHelp">
+                                    <div class="text-danger"
+                                        *ngIf="equipoForm.get('equipo')?.hasError('required') && equipoForm.get('equipo')?.touched">
+                                        <span>La equipo<strong>es obligatoria</strong></span>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="modelo" class="mb-2"><strong>Modelo:</strong> </label>
+                                    <input formControlName="modelo" type="text"
+                                        placeholder="Modelo del equipo" class="form-control form-control-lg"
+                                        aria-describedby="emailHelp">
+                                    <div class="text-danger"
+                                        *ngIf="equipoForm.get('modelo')?.hasError('required') && equipoForm.get('modelo')?.touched">
+                                        <span>La cantidad de estudiantes <strong>es obligatoria</strong></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label for="marca" class="mb-2"><strong>Marca:</strong> </label>
+                                    <input formControlName="marca" type="text"
+                                        placeholder="Marca del equipo" class="form-control form-control-lg"
+                                        aria-describedby="emailHelp">
+                                    <div class="text-danger"
+                                        *ngIf="equipoForm.get('marca')?.hasError('required') && equipoForm.get('marca')?.touched">
+                                        <span>La marca <strong>es obligatoria</strong></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label for="serie" class="mb-2"><strong>Serie:</strong> </label>
+                                    <input formControlName="serie" type="text"
+                                        placeholder="Serie del equipo" class="form-control form-control-lg"
+                                        aria-describedby="emailHelp">
+                                    <div class="text-danger"
+                                        *ngIf="equipoForm.get('serie')?.hasError('required') && equipoForm.get('serie')?.touched">
+                                        <span>La serie<strong>es obligatoria</strong></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label for="ubicacion" class="mb-2"><strong>Ubicación:</strong> </label>
+                                    <input formControlName="ubicacion" type="text"
+                                        placeholder="Ubicación del equipo" class="form-control form-control-lg"
+                                        aria-describedby="emailHelp">
+                                    <div class="text-danger"
+                                        *ngIf="equipoForm.get('ubicacion')?.hasError('required') && equipoForm.get('ubicacion')?.touched">
+                                        <span>La ubicación<strong>es obligatoria</strong></span>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="mb-3">
+                                    <label for="estado" class="mb-2"><strong>Estado:</strong> </label>
+                                    <select formControlName="estado" name="estado"
+                                    class="form-control form-control-lg" aria-describedby="emailHelp">
+                                       <option value="" >------Seleccione una opción-----</option>  
+                                        <option value="operativo" >Operativo</option>    
+                                        <option value="dañado">Dañado</option>    
+                                        <option value="prestado">Prestado</option>    
+                                      </select>    
+                                    <div class="text-danger"
+                                        *ngIf="equipoForm.get('estado')?.hasError('required') && equipoForm.get('estado')?.touched">
+                                        <span>El estado <strong>es obligatorio</strong></span>
+                                    </div>
+                                </div>
+
+
+            
+                                <div class="mb-3 text-center">
+                                    <button type="submit" [disabled]="equipoForm.invalid"
+                                        class="btn btn-success btn-lg">
+                                        Aceptar
+                                    </button>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -50,17 +50,15 @@
         <h4 class="fw-bold text-center">Bienvenido <i class="fas fa-user-lock"></i></h4>
         <br><br>
         <!-- Formulario -->
-        <form  method="post">
-          <div class="fw-bold mb-3">
-            <label for="email" class="form-label">Correo electrónico</label>
-            <input type="email"  placeholder="Email" class="form-control" name="email" required = "required">
+        <form (submit)="signIn()">
+          <div class="form-group mb-3">
+            <input type="email" [(ngModel)]="user.correo" name="email" class="form-control" placeholder="Email" required autofocus>
           </div>
-          <div class="fw-bold mb-3"> 
-            <label for="clave" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" name="password" placeholder="Password" required = "required">
+          <div class="form-group mb-3">
+              <input type="password" [(ngModel)]="user.clave" name="password" class="form-control" placeholder="Password" required>
           </div>
           <div class="text-center">
-            <button type="submit"  class="btn btn-primary">Iniciar Sesión</button>
+            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
           </div>
 
           <div class="text-black">

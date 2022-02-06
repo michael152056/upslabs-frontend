@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -7,19 +9,39 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  email: string;
-  password: string;
-  constructor() { 
-    
+  user={
+    correo: '',
+    clave: '',
+    tipo: ''
   }
-  getUser() {
-    const user = { email: this.email, password: this.password };
-    var email = this.email;
+  constructor(private authService: AuthService, private router: Router) { }
+
+  ngOnInit(): void {  }
+
+  signIn(){
+    this.authService.signIn(this.user)
+      .subscribe(
+        res => {
+          console.log(res)
+          localStorage.setItem('token', res.token);
+          localStorage.setItem('tipo', res.tipo);
+          localStorage.setItem('nombre', res.name);
+          localStorage.setItem('email', res.email);
+
+          localStorage.setItem('ubicacion', res.ubicacion);
+          localStorage.setItem('contra', res.contra);
+          localStorage.setItem('celular', res.celular);
+
+          localStorage.setItem('cedula', res.cedula);
+          localStorage.setItem('cargo', res.cargo);
+          localStorage.setItem('carrera', res.carrera);
+
+
+          if(localStorage.getItem('tipo') == 'administrador')  this.router.navigate(['/dashboard-admin']);
+          if(localStorage.getItem('tipo') == 'registrado')  this.router.navigate(['/dashboard-cliente']);
+        },
+        err => console.log(err)
+      )
   }
-
-  ngOnInit(): void {
-
-  }
-
 
 }

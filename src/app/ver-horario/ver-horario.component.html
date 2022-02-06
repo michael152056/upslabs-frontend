@@ -1,107 +1,46 @@
-    <div class="form-horario">
-      <form>
-        <div class="mb-3">
-          <label for="form-select" class="form-label">Seleccionar laboratorio</label>
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Laboratorios disponible</option>
-            <option value="Networking 1">Networking 1</option>
-            <option value="Networking 2">Networking 2</option>
-            <option value="Networking 3">Networking 3</option>
-            <option value="Interacción humano maquiná">Interacción humano maquiná</option>
-            <option value="Computación avanzada">Computación avanzada</option>
-          </select>
+<app-cabeza-usuario></app-cabeza-usuario>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="barra-lateral col-12 col-sm-auto">
+      <app-menu-dash></app-menu-dash>
+    </div>
+    <main class="main col">
+      <div class="row justify-content-center align-content-center text-center">
+        <div class="columna col-lg-6">
+
+          <figure class="text-center">
+            <h1 class="h1" style="color: rgb(18, 69, 122);">Ver Horario</h1>
+            <p aria-hidden="true">
+              <span class="placeholder col-3" style="background-color: rgb(255, 219, 0);"></span>
+            </p>
+          </figure>
+
+          <div class="form-horario">
+            <form [formGroup]="horarioForm" (ngSubmit)="ruta()">
+              <figure class="text-center">
+              <div class="mb-3">
+                <h4><label for="form-select" class="form-label">Seleccionar laboratorio</label></h4>
+                <select name="laboratorio" formControlName="horario_tabla" class="form-select" aria-label="Default select example">
+                  <option selected>Laboratorios disponible</option>
+                  <option value="Networking 1">Networking 1</option>
+                  <option value="Networking 2">Networking 2</option>
+                  <option value="Networking 3">Networking 3</option>
+                  <option value="Interacción humano máquina">Interacción humano máquina</option>
+                  <option value="Computación avanzada">Computación avanzada</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" type="submit">Desplegar Horarios</button>
+              </figure>
+            </form>
+          </div>
+
+            
+
         </div>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Desplegar Horarios</button>
-      </form>
-    </div>
-    <div id="collapseExample" class="collapse">
-      <div class="card card-body">
-        <figure class="text-center"><h2>Laboratorio: </h2></figure>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Horas</th>
-            <th scope="col">Lunes</th>
-            <th scope="col">Martes</th>
-            <th scope="col">Miercoles</th>
-            <th scope="col">Jueves</th>
-            <th scope="col">Viernes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">07:00 - 08:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">08:00 - 09:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">9:00 - 10:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">10:00 - 11:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">11:00 - 12:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">12:00 - 13:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">14:00 - 15:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">15:00 - 16:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">16:00 - 17:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">17:00 - 18:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">18:00 - 19:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">19:00 - 20:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
       </div>
-    </div>
+
+</main>
+</div>
+</div>

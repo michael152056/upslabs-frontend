@@ -1,0 +1,15 @@
+<div class="barra-lateral col-12 col-sm-auto">
+<nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
+     <a routerLink = "/dashboard-cliente" ><i class="fas fa-home"></i><span>Inicio</span></a>  
+     <a (click) = "actDatos()" ><i class="fas fa-user"></i><span>Actualizar Datos</span></a>
+     <a routerLink="/horario"><i class="fas fa-eye"></i><span>Ver calendario</span></a>
+     <a routerLink="/calificarEventos"><i class="fas fa-marker"></i><span>Calificar Eventos</span></a>
+     <a routerLink="/reservaLab"><i class="fas fa-desktop"></i><span>Reservar Laboratorio</span></a>
+     <a routerLink="/reservaEquipo"><i class="fas fa-server"></i><span>Reservar Equipo</span></a>
+     <a (click)="authService.logout()"><i class="fas fa-door-open"></i><span>Cerrar Sesión </span></a>
+</nav>
+</div>
+
+
+
+

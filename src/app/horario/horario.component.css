@@ -1,0 +1,64 @@
+/*BARRA LATERAL*/
+
+.barra-lateral {
+    background: rgb(18, 69, 122);
+    color: #fff;
+    min-width: 250px;
+    min-height: 100vh;
+    padding: 0;
+    z-index: 100 !important;
+}
+
+.barra-lateral a {
+    color: #fff;
+}
+
+.calendario{
+    text-align: center;
+    padding: 1em;
+    width: 60%;
+
+    justify-content: center;
+    margin: auto;
+}
+
+
+.flex{
+    display: flex;
+}
+
+.identificador{
+    background: rgb(52,196,113);
+    width: 1em;
+    height: 1em;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 0.3em;
+}
+
+.identificador2{
+    background: rgb(0,122,217);
+    width: 1em;
+    height: 1em;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 0.3em;
+}
+
+.identificador3{
+    background: rgb(255,148,46);
+    width: 1em;
+    height: 1em;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 0.3em;
+}

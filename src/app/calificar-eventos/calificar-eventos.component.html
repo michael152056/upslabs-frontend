@@ -1,0 +1,55 @@
+<app-cabeza-usuario></app-cabeza-usuario>
+
+    <div class="container-fluid">
+        <div class="row">
+            
+        <div class="barra-lateral col-12 col-sm-auto">
+            <app-menu-dash></app-menu-dash>
+        </div>
+            <main class="main col">
+                <div class="row justify-content-center align-content-center text-center">
+                    <div class="columna col-lg-6">
+                        <figure class="text-center">
+                            <h1 class="h1" style="color: rgb(18, 69, 122);">Calificar Eventos</h1>
+                            <p aria-hidden="true">
+                              <span class="placeholder col-3" style="background-color: rgb(255, 219, 0);"></span>
+                            </p>
+                          </figure>
+                
+                          <div class="form-horario">
+                            <form>
+                              <div class="mb-3">
+                                <label for="eventos" class="form-label">Seleccione el evento</label>
+                                <select  class="form-control" name="eventos" id="eventos"  >
+                                  <option  *ngFor="let evento of listEventos" value="{{evento.titulo_evento}}">{{evento.titulo_evento}}</option>
+                                </select>
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Ingresa qué tal te pareció el evento" rows="3"></textarea>
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Calificación</label>
+                                <select  class="form-control" name="calificacion" id="calificacion"  >
+                                  <option value="Muy malo">(1) Muy malo</option>
+                                  <option value="Malo">(2) Malo</option>
+                                  <option value="Regular">(3) Regular</option>
+                                  <option value="Bueno">(4) Bueno</option>
+                                  <option value="Excelente">(5) Excelente</option>
+                                </select>
+                              </div>
+
+                              <button  (click)="register()" class="btn btn-success" type="submit">Enviar</button>
+                              
+                            </form>
+                          </div>
+                        
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+
